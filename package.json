@@ -1,0 +1,24 @@
+{
+  "name": "frazilecloud",
+  "version": "1.0.0",
+  "description": "Frazile Cloud for Hosting & Domains",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrazileDevelopers/FrazileCloud.git"
+  },
+  "author": "Frazile Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrazileDevelopers/FrazileCloud/issues"
+  },
+  "homepage": "https://github.com/FrazileDevelopers/FrazileCloud#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
