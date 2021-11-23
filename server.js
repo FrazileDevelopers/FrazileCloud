@@ -29,17 +29,19 @@ app.get('/', (req, res) =>
   
 
 function fetchData(response) {
-    response.writeHead(200, {'Content-Type': 'text/html'});
-    // response.write('design/home.html');
-    fs.readFile(staticPath+'/home.html', null, function(error, data) {
-        if(error) {
-            response.writeHead(404);
-            response.write('File Not Found!');
-        } else {
-            response.write(data);
-        }
-        response.end();
-    });
+    // response.writeHead(200, {'Content-Type': 'text/html'});
+    // // response.write('design/home.html');
+    // fs.readFile(staticPath+'/home.html', null, function(error, data) {
+    //     if(error) {
+    //         response.writeHead(404);
+    //         response.write('File Not Found!');
+    //     } else {
+    //         response.write(data);
+    //     }
+    //     response.end();
+    // });
+
+    response.render('home');
     
 }
 // http.createServer(onRequest).listen(8000);
