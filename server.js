@@ -1,15 +1,24 @@
 const http = require('http');
 const fs = require('fs');
+const path = require('path');
 const mysql = require('mysql');
 const express = require('express');
+const hbs = require('hbs');
 const app = express();
+
+// static Variables
 const port = 8000;
+const staticPath = path.join(__dirname, '/public');
 
-app.use(express.static('./assets'));
+//To set view-engine
+app.set("view engine", "hbs");
+// hbs.registerPartials()
 
-app.get('/', function(req, res) {
-    fetchData(res);
-});
+// Built-In Middleware
+app.use(express.static(staticPath));
+
+app.get('/', (req, res) =>
+    fetchData(res));
 
 // var con = mysql.createConnection({
 //     host: "localhost",
@@ -20,17 +29,19 @@ app.get('/', function(req, res) {
   
 
 function fetchData(response) {
-    response.writeHead(200, {'Content-Type': 'text/html'});
-    // response.write('design/home.html');
-    fs.readFile('./design/home.html', null, function(error, data) {
-        if(error) {
-            response.writeHead(404);
-            response.write('File Not Found!');
-        } else {
-            response.write(data);
-        }
-        response.end();
-    });
+    // response.writeHead(200, {'Content-Type': 'text/html'});
+    // // response.write('design/home.html');
+    // fs.readFile(staticPath+'/home.html', null, function(error, data) {
+    //     if(error) {
+    //         response.writeHead(404);
+    //         response.write('File Not Found!');
+    //     } else {
+    //         response.write(data);
+    //     }
+    //     response.end();
+    // });
+
+    response.render('home');
     
 }
 // http.createServer(onRequest).listen(8000);
