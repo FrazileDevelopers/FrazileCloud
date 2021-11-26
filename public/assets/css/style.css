@@ -12046,3 +12046,10 @@ body .text-color-red {
 :root {
     --main-color: #d20120;
 }
+
+.whatsapp-icon i {
+    color: var(--main-color);
+    font-size: 40px;
+}
+
+.whatsapp-icon i:hover cursor {}
