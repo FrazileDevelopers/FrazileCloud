@@ -12052,4 +12052,8 @@ body .text-color-red {
     font-size: 40px;
 }
 
-.whatsapp-icon i:hover cursor {}
+.whatsapp-icon i:hover {
+    -webkit-transform: scaleY(1.2);
+    -ms-transform: scaleY(1.2);
+    transform: scaleY(1.2);
+}
