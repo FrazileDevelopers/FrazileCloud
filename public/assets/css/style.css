@@ -12051,9 +12051,3 @@ body .text-color-red {
     color: var(--main-color);
     font-size: 40px;
 }
-
-.whatsapp-icon i:hover {
-    -webkit-transform: scaleY(1.2);
-    -ms-transform: scaleY(1.2);
-    transform: scaleY(1.2);
-}
