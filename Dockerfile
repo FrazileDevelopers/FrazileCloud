@@ -4,9 +4,7 @@ WORKDIR /home/node/app
 COPY package*.json ./
 USER node
 RUN npm install -g npm@8.13.2
-RUN sudo npm install
-
-FROM node:latest-slim AS fzcloudapp
-COPY --from=fzcloud --chown=node:node /home/node/app .
+RUN npm install
+COPY --chown=node:node . .
 EXPOSE 5003
-CMD ["node", "app.js"]
+CMD [ "node", "app.js" ]
