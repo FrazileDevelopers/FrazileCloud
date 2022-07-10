@@ -7,7 +7,7 @@ const hbs = require('hbs');
 const app = express();
 
 // static Variables
-const port = 8000;
+const port = 5003;
 const staticPath = path.join(__dirname, '/public');
 
 //To set view-engine
